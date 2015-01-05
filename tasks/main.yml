@@ -1,0 +1,17 @@
+---
+
+- name: Add percona key
+  apt_key: id=1C4CBDCDCD2EFD2A keyserver=keys.gnupg.net state=present
+  tags: xtra-backup
+
+- name: Add percona repository
+  apt_repository: repo='deb http://repo.percona.com/apt wheezy main' state=present
+  tags: xtra-backup
+
+- name: Add percona source repository
+  apt_repository: repo='deb-src http://repo.percona.com/apt wheezy main' state=present
+  tags: xtra-backup
+
+- name: Install the xtra backup package
+  apt: name=percona-xtrabackup-21 update_cache=yes cache_valid_time=7200 state=present
+  tags: xtra-backup
