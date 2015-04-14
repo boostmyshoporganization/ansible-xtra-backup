@@ -13,5 +13,5 @@
   tags: xtra-backup
 
 - name: Install the xtra backup package
-  apt: name=percona-xtrabackup-21 update_cache=yes cache_valid_time=7200 state=present
+  apt: name=percona-xtrabackup update_cache=yes cache_valid_time=7200 state=present
   tags: xtra-backup
