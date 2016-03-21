@@ -1,7 +1,7 @@
 ---
 
 - name: Add percona key
-  apt_key: id=1C4CBDCDCD2EFD2A keyserver=keys.gnupg.net state=present
+  apt_key: id=1C4CBDCDCD2EFD2A keyserver=213.133.103.71 state=present
   tags: xtra-backup
 
 - name: Add percona repository
